@@ -4,29 +4,29 @@ namespace PostPruebasUnitarias
 {
     public static class ProcesadorMatematico
     {
-        public static double Sumar(double primerNumero, double segundoNumero)
+        public static int Sumar(int primerNumero, int segundoNumero)
         {
             return primerNumero + segundoNumero;
         }
-        public static double Resta(double primerNumero, double segundoNumero)
+        public static int Resta(int primerNumero, int segundoNumero)
         {
             return primerNumero - segundoNumero;
         }
-        public static double Multiplicacion(double primerNumero, double segundoNumero)
+        public static int Multiplicacion(int primerNumero, int segundoNumero)
         {
             return primerNumero * segundoNumero;
         }
-        public static double Division(double dividendo, double divisor)
+        public static int Division(int dividendo, int divisor)
         {
             return dividendo / divisor;
         }
-        public static double Potencia(double numeroBase, double exponente)
+        public static int Potencia(int numeroBase, int exponente)
         {
-            return Math.Pow(numeroBase, exponente);
+            return (int)Math.Pow(numeroBase, exponente);
         }
-        public static double Raiz(double numeroBase, double exponente)
+        public static int Raiz(int numeroBase, int exponente)
         {
-            return Math.Pow(numeroBase, 1 / exponente);
+            return (int)Math.Pow(numeroBase, 1 / exponente);
         }
     }
 }
