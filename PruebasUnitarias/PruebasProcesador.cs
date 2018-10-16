@@ -8,7 +8,8 @@ namespace PruebasUnitarias
     public class PruebasProcesador
     {
         [TestMethod]
-        public void TestSuma()
+        [TestCategory("Suma")]
+        public void TestSumaOK()
         {
             //Definimos las variables
             //Arrange
@@ -26,6 +27,26 @@ namespace PruebasUnitarias
         }
 
         [TestMethod]
+        [TestCategory("Suma")]
+        public void TestSumaNOK()
+        {
+            //Definimos las variables
+            //Arrange
+            var operador1 = 0;
+            var operador2 = 0;
+
+            //Ejecutamos la prueba
+            //Act
+            var result = ProcesadorMatematico.Sumar(operador1, operador2);
+
+            //Comparamos resultados
+            //Assert
+            var valorEsperado = 10;
+            Assert.AreNotEqual(valorEsperado, result);
+        }
+
+        [TestMethod]
+        [TestCategory("Division")]
         public void TestDivision1()
         {
             //Definimos las variables
@@ -44,6 +65,7 @@ namespace PruebasUnitarias
         }
 
         [TestMethod]
+        [TestCategory("Division")]
         [ExpectedException(typeof(DivideByZeroException))] //Excepcion esperada
         public void TestDivisionExcepcion()
         {
